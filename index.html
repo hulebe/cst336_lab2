@@ -36,12 +36,12 @@
                     if(q1Response == "sacramento") {
                         $("#q1Feedback").html("Correct!");
                         $("#q1Feedback").attr("class", "bg-success text-white");
-                        $("#markImg1").html("img src ='img/checkmark.png' alt='checkmar'>");
+                        $("#markImg1").html("<img src ='img/checkmark.png' alt='checkmar'>");
                         score += 20;
                     }else {
                         $("#q1Feedback").html("Incorrect!");
                         $("#q1Feedback").attr("class", "bg-warning text-white");
-                        $("#markImg1").html("img src ='img/xmark.png' alt='xmark'>");
+                        $("#markImg1").html("<img src ='img/xmark.png' alt='xmark'>");
                     }
                     
                     $("#totalScore").html(`Total Score: ${score}`);
@@ -65,6 +65,6 @@
     	<h3 id="validationFdbk" class="bg-danger text-white"></h3>
     	<button class="btn btn-outline-success"> Submit Quiz </button>
 	    <br>
-	    <h2 id="TotalScore" class="text-info"></h2>
+	    <h2 id="totalScore" class="text-info"></h2>
     </body>
 </html>
