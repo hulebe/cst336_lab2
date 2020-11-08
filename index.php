@@ -11,6 +11,7 @@
                 
                 //Global Variables
                 var score = 0;
+                var attempts = localStorage.getItem("total_attempts");
                 
                 //event listener
                 //"Submit Quiz" button
@@ -107,6 +108,8 @@
                         wrongAnswer(5);
                     }
                     $("#totalScore").html(`Total Score: ${score}`);
+                    $("#totalAttempts").html(`Total Attempts: ${++attempts}`);
+                    localStorage.setItem("total_attempts", attempts);
                 }
             
             /*    $("button").on("click", function(){
@@ -160,6 +163,8 @@
 	    <br><br>
 	    
 	    <button class="btn btn-outline-success"> Submit Quiz </button>
-	     <h2 id="totalScore" class="text-info"></h2>
+	    <h2 id="totalScore" class="text-info"></h2>
+	    
+	    <h3 id="totalAttempts"></h3>
     </body>
 </html>
